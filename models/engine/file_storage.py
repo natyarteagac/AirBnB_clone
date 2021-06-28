@@ -3,7 +3,6 @@
 Writing a class FileStorage that serializes instances to a JSON file and deserializes JSON file to instances
 """
 import json
-from collections import namedtuple
 
 
 class FileStorage:
@@ -29,9 +28,11 @@ class FileStorage:
 
     def reload(self):
         """deserializes the JSON file to __objects"""
+        from models.base_model import BaseModel
         try:
             with open(FileStorage.__file_path, "r", encoding="utf-8") as f:
-                json_file = json.load(f)
-                FileStorage.__objects = json_file
+                json_file = json.loads(f.read())
+                for key, value in json_file.items():
+                    FileStorage.__objects[key] = BaseModel(**value)
         except Exception as ex:
             pass
