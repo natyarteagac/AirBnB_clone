@@ -3,6 +3,7 @@
 Writing a class FileStorage that serializes instances to a JSON file and deserializes JSON file to instances
 """
 import json
+from collections import namedtuple
 
 
 class FileStorage:
@@ -12,23 +13,25 @@ class FileStorage:
 
     def all(self):
         """ Return __objects"""
-        return self.__objects
+        return FileStorage.__objects
 
     def new(self, obj):
         """Set in __objects the obj with the key"""
         object_id = obj.__class__.__name__ + '.' + obj.id
-        self.__objects[object_id] = obj
+        FileStorage.__objects[object_id] = obj.to_dict()
 
     def save(self):
         """Serializes __object to the JSON file"""
-        with open(self.__file_path, "w", encoding="utf-8") as f:
-            f.write(json.dumps(self.__objects))
+        with open(FileStorage.__file_path, "w", encoding="utf-8") as f:
+            for key, value in FileStorage.__objects.items():
+                aux_list = {key: value}
+            f.write(json.dumps(aux_list))
 
     def reload(self):
         """deserializes the JSON file to __objects"""
         try:
-            if self.__file_path:
-                with open(self.__file_path, "r", encoding="utf-8") as f:
-                    return (json.load(f))
+            with open(FileStorage.__file_path, "r", encoding="utf-8") as f:
+                json_file = json.load(f)
+                FileStorage.__objects = json_file
         except Exception as ex:
             pass
