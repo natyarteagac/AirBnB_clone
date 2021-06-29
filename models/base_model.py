@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
     Defines all common attributes/methods for other classes from BaseModel
+
+
 """
 
 from uuid import uuid4
