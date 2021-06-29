@@ -6,12 +6,11 @@ contains the entry point of the command interpreter
 import cmd
 from models.base_model import BaseModel
 from models import storage
-import shlex
 
 
 class HBNBCommand(cmd.Cmd):
     """command interpreter"""
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
     class_name = ["BaseModel"]
 
     def do_EOF(self, line):
