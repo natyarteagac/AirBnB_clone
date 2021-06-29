@@ -118,8 +118,10 @@ class HBNBCommand(cmd.Cmd):
             elif len(args) == 3:
                 print("** value missing **")
             else:
+                trimp = args[3]
+                trimp = trimp[1:-1]
                 up_obj = aux.get(obj)
-                setattr(up_obj, args[2], args[3])
+                setattr(up_obj, args[2], trimp)
                 storage.save()
 
 if __name__ == '__main__':
