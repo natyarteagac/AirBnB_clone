@@ -38,8 +38,11 @@ class HBNBCommand(cmd.Cmd):
             print(new_inst.id)
 
     def do_show(self, arg):
+        """
+        Prints the string representation of
+        an instance based on the class name and id
+        """
         args = arg.split()
-
         if len(args) == 0:
             print("** class name missing **")
         elif args[0] not in HBNBCommand.class_name:
@@ -54,6 +57,42 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print("** no instance found **")
 
+    def do_destroy(self, arg):
+        """Deletes an instance based on the class name and id"""
+        args = arg.split()
+        if len(args) == 0:
+            print("** class name missing **")
+        elif args[0] not in HBNBCommand.class_name:
+            print("** class doesn't exist **")
+        elif len(args) == 1:
+            print("** instance id missing **")
+        else:
+            obj = "{}.{}".format(args[0], args[1])
+            aux = storage.all()
+            if obj in aux:
+                del aux[obj]
+            else:
+                print("** no instance found **")
+
+    def do_all(self, arg):
+        """
+        Prints all string representation of all
+        instances based or not on the class name
+        """
+        args = arg.split()
+        l_obj = []
+        aux = storage.all()
+        if len(args) == 0:
+            for key, value in aux.items():
+                l_obj.append(str(value))
+            print(l_obj)
+        elif args[0] not in HBNBCommand.class_name:
+            print("** class doesn't exist **")
+        else:
+            for key, value in aux.items():
+                if key.split(".")[0] == args[0]:
+                    l_obj.append(str(value))
+            print(l_obj)
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
