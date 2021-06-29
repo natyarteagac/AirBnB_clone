@@ -14,15 +14,15 @@ class HBNBCommand(cmd.Cmd):
     class_name = ["BaseModel"]
 
     def do_EOF(self, line):
-        "exit the program"
+        """exit the program"""
         return True
 
     def do_quit(self, line):
-        "Quit command to exit the program"
+        """Quit command to exit the program"""
         return True
 
     def emptyline(self):
-        "an empty line + ENTER shouldn’t execute anything"
+        """an empty line + ENTER shouldn’t execute anything"""
         return cmd.Cmd.postloop(self)
 
     def do_create(self, arg):
@@ -123,7 +123,6 @@ class HBNBCommand(cmd.Cmd):
                 if type(trimp) is int or float:
                     setattr(up_obj, args[2], str(trimp))
                 storage.save()
-
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
