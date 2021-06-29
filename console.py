@@ -121,8 +121,10 @@ class HBNBCommand(cmd.Cmd):
                 trimp = args[3]
                 trimp = trimp[1:-1]
                 up_obj = aux.get(obj)
-                setattr(up_obj, args[2], trimp)
+                if type(trimp) is int or float:
+                    setattr(up_obj, args[2], str(trimp))
                 storage.save()
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
