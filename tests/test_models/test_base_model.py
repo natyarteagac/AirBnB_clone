@@ -5,6 +5,7 @@
 import unittest
 import pep8
 from models.base_model import BaseModel
+import datetime
 
 
 class TestBaseModel(unittest.TestCase):
@@ -16,8 +17,14 @@ class TestBaseModel(unittest.TestCase):
         result = pep8_style.check_files(['models/base_model.py'])
         self.assertEqual(result.total_errors, 0)
 
-    def test_uuid_is_tring(TypeEr):
-        if type(BaseModel.id) is not str():
+    def test_uuid_is_string(self):
+        """ Testing if uuid is string """
+        bm = BaseModel()
+        if type(bm.id) is str:
+            self.assertTrue(bm.id)
+
+    def test_time_corresponding_to(self):
+        """ Testing if time correspond to """
 
 
 if __name__ == '__main__':
