@@ -11,8 +11,5 @@ class City(BaseModel):
         Inheritance from BaseModel
     """
 
-    def __init__(self, *args, **kwargs):
-        """Creating new instances from City """
-        super().__init__(*args, **kwargs)
-        self.state_id = ""
-        self.name = ""
+    self.state_id = ""
+    self.name = ""

@@ -10,9 +10,6 @@ class Review(BaseModel):
     """
         Inheritance from BaseModel
     """
-
-    def __init__(self, *args, **kwargs):
-        """Creating new instances from Review """
-        self.place_id = ""
-        self.user_id = ""
-        self.text = ""
+    self.place_id = ""
+    self.user_id = ""
+    self.text = ""

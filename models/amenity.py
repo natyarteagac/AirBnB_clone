@@ -10,8 +10,4 @@ class Amenity(BaseModel):
     """
         Inheritance from BaseModel
     """
-
-    def __init__(self, *args, **kwargs):
-        """Creating new instances from City """
-        super().__init__(*args, **kwargs)
-        self.name = ""
+    self.name = ""
