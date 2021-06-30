@@ -11,5 +11,5 @@ class City(BaseModel):
         Inheritance from BaseModel
     """
 
-    self.state_id = ""
-    self.name = ""
+    state_id = ""
+    name = ""

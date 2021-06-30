@@ -10,4 +10,4 @@ class Amenity(BaseModel):
     """
         Inheritance from BaseModel
     """
-    self.name = ""
+    name = ""
