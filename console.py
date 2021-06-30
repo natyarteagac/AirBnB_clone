@@ -15,6 +15,9 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+class_name = [
+    "BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
+
 
 class HBNBCommand(cmd.Cmd):
     """
@@ -22,8 +25,6 @@ class HBNBCommand(cmd.Cmd):
     """
 
     prompt = '(hbnb) '
-    class_name = [
-        "BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
 
     def do_EOF(self, line):
         """exit the program"""
