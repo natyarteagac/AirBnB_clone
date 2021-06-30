@@ -14,9 +14,7 @@ class TestBaseModel(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         """
-        setUp method to create two instances
-        Args:
-            None
+        setUpClass for create two instances for tests cases
         """
         self.my_model1 = BaseModel()
         self.my_model2 = BaseModel()
@@ -24,14 +22,12 @@ class TestBaseModel(unittest.TestCase):
     @classmethod
     def tearDownClass(self):
         """
-        tearDown method
-        Args:
-            None
+        tearDownClass for delete the instances for tests
         """
         del self.my_model1
         del self.my_model2
 
-    """Testing BaseModel """
+    """Testing BaseModel"""
 
     def test_pep8(self):
         """ Testing pep8 in file"""
