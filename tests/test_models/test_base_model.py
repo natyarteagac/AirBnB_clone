@@ -13,7 +13,7 @@ class TestBaseModel(unittest.TestCase):
     def test_pep8(self):
         """ Testing pep8 style """
         pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['base_model.py'])
+        result = pep8style.check_files(['base_model'])
         self.assertEqual(result.total_errors, 0)
 
 
