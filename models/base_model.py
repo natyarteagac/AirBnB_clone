@@ -7,7 +7,7 @@
 
 from uuid import uuid4
 from datetime import datetime
-from models import storage
+import models
 
 
 class BaseModel():
@@ -18,7 +18,7 @@ class BaseModel():
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            storage.new(self)
+            models.storage.new(self)
         else:
             for key, value in kwargs.items():
                 if key != '__class__':
@@ -36,8 +36,8 @@ class BaseModel():
     def save(self):
         """ Update datetime of atribute self.updated_at"""
         self.updated_at = datetime.now()
-        storage.new(self)
-        storage.save()
+        models.storage.new(self)
+        models.storage.save()
 
     def to_dict(self):
         """ Return all the atributes of the class"""
