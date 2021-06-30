@@ -13,7 +13,6 @@ class Review(BaseModel):
 
     def __init__(self, *args, **kwargs):
         """Creating new instances from Review """
-        super().__init__(*args, **kwargs)
         self.place_id = ""
         self.user_id = ""
         self.text = ""
