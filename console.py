@@ -15,14 +15,15 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+class_name = [
+    "BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
+
 
 class HBNBCommand(cmd.Cmd):
     """
     command interpreter
     """
 
-    class_name = [
-        "BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
     prompt = '(hbnb) '
 
     def do_EOF(self, line):
