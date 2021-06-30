@@ -12,4 +12,4 @@ class State(BaseModel):
         State class Inheritance from BaseModel
     """
 
-    self.name = ""
+    name = ""
