@@ -7,11 +7,15 @@ import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-    """command interpreter"""
+    """
+    command interpreter
+    """
+
     prompt = '(hbnb)'
 
     def do_EOF(self, line):
         "exit the program"
+        print()
         return True
 
     def do_quit(self, line):
@@ -21,7 +25,6 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         "an empty line + ENTER shouldn’t execute anything"
         return cmd.Cmd.postloop(self)
-
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
