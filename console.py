@@ -11,7 +11,7 @@ class HBNBCommand(cmd.Cmd):
     command interpreter
     """
 
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
 
     def do_EOF(self, line):
         "exit the program"
