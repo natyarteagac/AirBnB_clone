@@ -21,9 +21,9 @@ class HBNBCommand(cmd.Cmd):
     command interpreter
     """
 
-    prompt = '(hbnb) '
     class_name = [
         "BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
+    prompt = '(hbnb) '
 
     def do_EOF(self, line):
         """exit the program"""
@@ -36,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emptyline(self):
         """an empty line + ENTER shouldn’t execute anything"""
-        pass
+        return cmd.Cmd.postloop(self)
 
     def do_create(self, arg):
         """ Creating a new instance of BaseModel"""
