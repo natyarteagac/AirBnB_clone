@@ -13,7 +13,7 @@ class User(BaseModel):
 
     def __init__(self, *args, **kwargs):
         """Creating new instances from User """
-        super().__init__(*args, kwargs)
+        super().__init__(*args, **kwargs)
         self.email = ""
         self.password = ""
         self.first_name = ""
