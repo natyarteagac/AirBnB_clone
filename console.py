@@ -20,9 +20,7 @@ class_name = [
 
 
 class HBNBCommand(cmd.Cmd):
-    """
-    command interpreter
-    """
+    """Command interpreter"""
 
     prompt = "(hbnb) "
 
