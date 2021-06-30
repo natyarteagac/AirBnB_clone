@@ -37,7 +37,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emptyline(self):
         """an empty line + ENTER shouldn’t execute anything"""
-        pass
+        return cmd.Cmd.postloop(self)
 
     def do_create(self, arg):
         """ Creating a new instance of BaseModel"""
