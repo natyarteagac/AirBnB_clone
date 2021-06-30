@@ -5,7 +5,13 @@ JSON file and deserializes JSON file to instances
 
 """
 import json
+from models.base_model import BaseModel
 from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 
 
 class FileStorage:
@@ -44,11 +50,11 @@ class FileStorage:
         """
         deserializes the JSON file to __objects
         """
-        from models.base_model import BaseModel
         try:
             with open(FileStorage.__file_path, "r", encoding="utf-8") as f:
                 json_file = json.loads(f.read())
                 for key, value in json_file.items():
-                    FileStorage.__objects[key] = BaseModel(**value)
+                    class_name = key.split(".")[0]
+                    FileStorage.__objects[key] = eval(class_name)(**value)
         except Exception as ex:
             pass
