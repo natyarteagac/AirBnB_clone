@@ -13,12 +13,11 @@ class HBNBCommand(cmd.Cmd):
     command interpreter
     """
 
-    prompt = '(hbnb) '
+    prompt = ' (hbnb) '
     class_name = ["BaseModel"]
 
     def do_EOF(self, line):
         """exit the program"""
-        print()
         return True
 
     def do_quit(self, line):
