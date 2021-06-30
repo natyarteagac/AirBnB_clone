@@ -55,6 +55,6 @@ BaseModel.ed4dddc6-bad9-4c0e-a0f7-817f073d0437
 ## License 📄
 **Free Software!**
 
-## Autores ✒️
+## Authors ✒️
 **Carlos Cruz Zuluaga** - [klich404](https://github.com/klich404)
 **Natalia Arteaga Corrales** - [natyarteagac](https://github.com/natyarteagac)
