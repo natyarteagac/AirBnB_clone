@@ -42,7 +42,6 @@ class TestBaseModel(unittest.TestCase):
 
     def test_is_equal(self):
         """ Testing if time corresponds to """
-
         self.assertNotEqual(self.my_model1.id, self.my_model2.id)
 
     def test_atributes(self):
@@ -51,7 +50,12 @@ class TestBaseModel(unittest.TestCase):
         self.assertTrue(hasattr(self.my_model1, "updated_at"))
         self.assertTrue(hasattr(self.my_model1, "id"))
         self.assertIsInstance(self.my_model1.created_at, datetime)
-        self.assertIsInstance(self.my_model2.updated_at, datetime)
+        self.assertIsInstance(self.my_model1.updated_at, datetime)
+
+    def test_checking_to_dict_representation(self):
+        """Checking to dict representation"""
+        if type(self.my_model1.to_dict) is dict:
+            self.assertTrue(self.my_model1)
 
 
 if __name__ == '__main__':
