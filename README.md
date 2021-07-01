@@ -11,23 +11,24 @@ To use this AirBnB clone implementation you must clone the following [repository
 ## Features 📋
 This version of a AirBnB Clone can:
 - Creates a new instance, saves it (to the JSON file) and prints the id.
-    + (hbnb) **create** <class name>
+    + ```(hbnb) **create** <class name>```
+
 
 
 - Prints the string representation of an instance based on the class name and id.
-    + (hbnb) **show** <class name> <id>
+    + ```(hbnb) **show** <class name> <id> ```
 
 
 - Deletes an instance based on the class name and id (save the change into the JSON file).
-    + (hbnb) **destroy** <class name> <id>
+    + ```(hbnb) **destroy** <class name> <id>```
 
 
 - Prints all string representation of all instances based or not on the class name.
-    + (hbnb) **all** *or* (hbnb) **all** <class name>
+    + ```(hbnb) **all** *or* (hbnb) **all** <class name>```
 
 
 - Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file).
-    + (hbnb) **update** <class name> <id> <attribute name> <attribute value>
+    + ```(hbnb) **update** <class name> <id> <attribute name> <attribute value>```
 
 The currently available class names are: **BaseModel, User, State, City, Amenity, Place, Review**.
 This programm is open source and can be accessed from the the public repository in [Github linked](https://github.com/natyarteagac/AirBnB_clone.git) above.
