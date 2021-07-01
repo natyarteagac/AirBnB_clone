@@ -30,6 +30,17 @@ This version of a AirBnB Clone can:
 - Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file).
     + ```(hbnb) **update** <class name> <id> <attribute name> <attribute value>```
 
+
+- Shows the documentation of each command implemented in the console.
+    + ```(hbnb) **help** or (hbnb) **help** <command>```
+
+
+- Exit the program.
+    + ```(hbnb) **<CTRL + D>**```
+
+- Quit command to exit the program.
+    + ```(hbnb) **quit**```
+
 The currently available class names are: **BaseModel, User, State, City, Amenity, Place, Review**.
 This programm is open source and can be accessed from the the public repository in [Github linked](https://github.com/natyarteagac/AirBnB_clone.git) above.
 
@@ -44,7 +55,7 @@ ed4dddc6-bad9-4c0e-a0f7-817f073d0437
 [BaseModel] (ed4dddc6-bad9-4c0e-a0f7-817f073d0437) {'id':'ed4dddc6-bad9-4c0e-a0f7-817f073d0437','created_at':
 datetime.datetime(2021, 6, 30, 12, 43, 43, 759394), 'updated_at': datetime.datetime(2021, 6, 30, 12, 43,
 43, 759410)}
-(hbnb) all BaseModel 
+(hbnb) all BaseModel
 ["[BaseModel] (ed4dddc6-bad9-4c0e-a0f7-817f073d0437) {'id': 'ed4dddc6-bad9-4c0e-a0f7-817f073d0437',
 'created_at': datetime.datetime(2021, 6, 30, 12, 43, 43, 759394), 'updated_at': datetime.datetime(2021, 6, 30
 , 12, 43, 43, 759410)}"], ["[BaseModel] (ed4dddc6-bad9-4c0e-a0f7-817f073d0437) {'id': 'ed4dddc6-bad9-4c0e-a0f
