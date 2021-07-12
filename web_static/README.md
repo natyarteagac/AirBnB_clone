@@ -58,3 +58,8 @@
 <li>What are Box properties in CSS</li>
 </ul>
 
+<h2>More Info</h2>
+
+<p><img src="https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step1.png" alt="" style="" /></p>
+
+</div>
