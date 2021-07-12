@@ -1,0 +1,78 @@
+ul {
+    list-style-type: none;
+}
+li:first-child {
+    margin-top: 25px;
+}
+li:last-child {
+    margin-bottom: 30px;
+}
+h2 {
+    font-size: 16px;
+    margin-left: -10px;
+    margin-bottom: 0px;
+}
+h3 {
+    font-weight: 600;
+    text-indent: 30px;
+    line-height: 10px;
+}
+h4 {
+    font-weight: 400;
+    font-size: 14px;
+    text-indent: 30px;
+    line-height: 1px;
+}
+.filters {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    border: 1px #DDDDDD;
+    border-radius: 4px;
+    align-items: center;
+}
+.locations {
+    display: block;
+    height: 100%;
+    width: 25%;
+    border-right: #DDDDDD 1px solid;
+    transition-duration: 0.5s;
+}
+.amenities {
+    height: 100%;
+    width: 25%;
+}
+button {
+    font-size: 18px;
+    background-color: #FF5A5F;
+    border: none;
+    color: #FFFFFF;
+    height: 48px;
+    width: 20%;
+    opacity: 90%;
+    border-radius: 4px;
+    margin: 0 30px 0 auto;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 90;
+}
+.popover {
+    visibility: hidden;
+    background-color: #FAFAFA;
+    height: auto;
+    width: 83.5%;
+    margin: 25px auto;
+    border:  #DDDDDD 1px solid;
+    border-radius: 4px;
+}
+.locations:hover .popover {
+    visibility: visible;
+    position: sticky;
+}
+.amenities:hover .popover {
+    visibility: visible;
+    position: sticky;
+}
